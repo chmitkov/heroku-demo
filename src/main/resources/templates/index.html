@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en"  xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h1>Hello World!</h1>
+    <form action="/users/add" method="post">
+        <label for="username">
+            <input id="username" type="text" name="username" placeholder="Enter username">
+        </label>
+        <button type="submit">Add Username</button>
+    </form>
+
+    <ol>
+        <li th:each="u : ${users}" th:text="${u}"></li>
+    </ol>
+</body>
+</html>
